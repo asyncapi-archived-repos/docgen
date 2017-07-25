@@ -1,6 +1,8 @@
 # AsyncAPI documentation generator
 
-Use your AsyncAPI definition to generate human-readable beautiful documentation for your API.
+Use your AsyncAPI definition to generate beautiful human-readable documentation for your API.
+
+![](screenshot.png)
 
 ## How to use it?
 
