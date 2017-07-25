@@ -4,11 +4,13 @@ Use your AsyncAPI definition to generate beautiful human-readable documentation 
 
 ![](screenshot.png)
 
-## How to use it?
+## Installation
 
 ```bash
 npm install -g asyncapi-docgen
 ```
+
+## How to use it?
 
 ```bash
 asyncapi-docgen path-to-asyncapi-file path-to-output-directory
