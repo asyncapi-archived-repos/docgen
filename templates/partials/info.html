@@ -1,0 +1,18 @@
+<a name="info"></a>
+<h1>{{asyncapi.info.title}} {{asyncapi.info.version}}</h1>
+
+<p>{{{asyncapi.info.descriptionAsHTML}}}</p>
+
+<p>
+  To use this API you should connect to <code>{{{asyncapi.host}}}</code>. The supported schemes are:
+
+  </ul>
+  {{#each asyncapi.schemes}}
+  <li>{{.}}</li>
+  {{/each}}
+  </ul>
+</p>
+
+<a name="termsOfService"></a>
+<h2 class="info__terms-of-service__header">Terms of service</h2>
+<p>{{{asyncapi.info.termsOfServiceAsHTML}}}</p>

@@ -1,0 +1,13 @@
+<tr class="table__body__row">
+  <td class="table__body__cell">{{{tree path}}}{{propName}} {{#if ./required}}<span class="required-badge">(Required)</span>{{/if}}</td>
+  <td class="table__body__cell">{{prop.title}}</td>
+  <td class="table__body__cell">{{prop.type}}</td>
+  <td class="table__body__cell">{{prop.format}}</td>
+  <td class="table__body__cell">{{prop.default}}</td>
+  <td class="table__body__cell">{{prop.description}}</td>
+</tr>
+{{#if prop.properties}}
+  {{#each prop.properties}}
+  {{> schemaProp prop=. propName=@key path=(concat ../path @key '.')}}
+  {{/each}}
+{{/if}}

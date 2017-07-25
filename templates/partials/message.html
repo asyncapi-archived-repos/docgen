@@ -1,0 +1,36 @@
+<a name="message-{{messageName}}"></a>
+<div class="message">
+  <h3 class="message__header">
+    {{messageName}}
+    {{#if message.deprecated}}
+    <span class="operation-badge operation-badge--deprecated message__header__operation-badge">Deprecated</span>
+    {{/if}}
+  </h3>
+  {{{message.summaryAsHTML}}}
+  {{{message.descriptionAsHTML}}}
+
+  <h4>Payload</h4>
+
+  <table class="table">
+    <thead class="table__head">
+      <tr class="table__head__row">
+        <th class="table__head__cell">Name</th>
+        <th class="table__head__cell">Type</th>
+        <th class="table__head__cell">Description</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+      {{#each message.payload.properties}}
+        {{> property prop=. propName=@key prefix=''}}
+      {{else}}
+        {{> property prop=message propName=messageName prefix=''}}
+      {{/each}}
+    </tbody>
+  </table>
+
+{{#if message.example}}
+<h4>Example</h4>
+
+<pre class="hljs"><code class="json">{{~message.formattedExample~}}</code></pre>
+{{/if}}
+</div>

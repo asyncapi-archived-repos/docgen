@@ -1,0 +1,41 @@
+{
+  "name": "asyncapi-docgen",
+  "version": "1.0.0",
+  "description": "An AsyncAPI documentation generator.",
+  "scripts": {
+    "test": "node tests/test"
+  },
+  "bin": {
+    "asyncapi-docgen": "./cli.js",
+    "adg": "./cli.js"
+  },
+  "preferGlobal": true,
+  "bugs": {
+    "url": "https://github.com/asyncapi/docgen/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/asyncapi/docgen.git"
+  },
+  "keywords": [
+    "asyncapi",
+    "documentation",
+    "generator"
+  ],
+  "author": {
+    "name": "Fran Mendez",
+    "email": "fmvilas@gmail.com"
+  },
+  "homepage": "https://github.com/asyncapi/docgen",
+  "dependencies": {
+    "handlebars": "^4.0.6",
+    "highlight.js": "^9.12.0",
+    "js-yaml": "^3.8.3",
+    "json-schema-ref-parser": "^3.1.2",
+    "lodash": "^4.17.4",
+    "markdown-it": "^8.3.1",
+    "mkdirp": "^0.5.1",
+    "z-schema": "^3.18.2"
+  },
+  "devDependencies": {}
+}
