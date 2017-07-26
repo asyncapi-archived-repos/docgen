@@ -1,6 +1,6 @@
 {
   "name": "asyncapi-docgen",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An AsyncAPI documentation generator.",
   "scripts": {
     "test": "node tests/test"
