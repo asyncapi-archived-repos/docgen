@@ -2,6 +2,7 @@
   "name": "asyncapi-docgen",
   "version": "1.0.2",
   "description": "An AsyncAPI documentation generator.",
+  "main": "./lib/docgen.js",
   "scripts": {
     "test": "node tests/test"
   },
