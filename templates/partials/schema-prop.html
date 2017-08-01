@@ -1,7 +1,7 @@
 <tr class="table__body__row">
   <td class="table__body__cell">{{{tree path}}}{{propName}} {{#if ./required}}<span class="required-badge">(Required)</span>{{/if}}</td>
   <td class="table__body__cell">{{prop.title}}</td>
-  <td class="table__body__cell">{{prop.type}}</td>
+  <td class="table__body__cell">{{prop.type}}{{#if prop.items.type}}({{prop.items.type}}){{/if}}</td>
   <td class="table__body__cell">{{prop.format}}</td>
   <td class="table__body__cell">{{prop.default}}</td>
   <td class="table__body__cell">{{prop.description}}</td>
@@ -10,4 +10,11 @@
   {{#each prop.properties}}
   {{> schemaProp prop=. propName=@key path=(concat ../path @key '.')}}
   {{/each}}
+{{/if}}
+{{#if prop.items}}
+  {{#if prop.items.properties}}
+    {{#each prop.items.properties}}
+    {{> property prop=. propName=@key path=(concat ../path @key '.')}}
+    {{/each}}
+  {{/if}}
 {{/if}}
