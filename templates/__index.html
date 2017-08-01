@@ -92,9 +92,22 @@
       }
     }
 
+    function bindExpandButtons () {
+      var buttons = document.querySelectorAll('.table__expand');
+
+      for(var i=0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', function (e) {
+          var tableRow = document.querySelector('[data-nested-index="' + e.target.attributes['data-index'].value + '"]');
+          tableRow.classList.toggle('table__body__row--with-nested--expanded');
+          e.target.classList.toggle('table__expand--open');
+        });
+      }
+    }
+
     window.addEventListener('hashchange', selectCurrentLink);
     window.addEventListener('load', selectCurrentLink);
     window.addEventListener('load', highlightCode);
+    window.addEventListener('load', bindExpandButtons);
   </script>
 </body>
 </html>
