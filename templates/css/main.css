@@ -98,6 +98,11 @@ html, body {
   font-size: 20px;
 }
 
+.info__server__enum-list {
+  padding-left: 1em;
+  margin: 0;
+}
+
 .section-header {
   border-bottom: #333 2px solid;
   padding-bottom: 10px;
@@ -175,6 +180,57 @@ html, body {
 .table__body__cell {
   padding: 6px 12px;
   vertical-align: top;
+}
+.table__expand {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 7px solid black;
+  margin-right: 10px;
+  transition: .5s ease;
+  cursor: pointer;
+}
+.table__expand--open {
+  transform: rotate(90deg);
+}
+.table__body__row--with-nested .table--nested {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease;
+}
+.table__body__row--with-nested--expanded .table--nested {
+  max-height: 300px;
+}
+.table--nested {
+  margin: 0;
+  width: 100%;
+  box-shadow: none;
+  border-spacing: 0;
+  font-size: 13px;
+}
+.table--nested__header {
+  background-color: #37474f;
+  color: #eee;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px 0;
+}
+.table--nested__head__row {
+  background-color: #455a64;
+  color: #eee;
+}
+.table--nested__head__cell {
+  width: 20%;
+}
+.table--nested__body__row {
+  background: #78909c;
+  color: #333;
+}
+.table--nested__body__row:nth-of-type(odd) {
+  background: #90a4ae;
 }
 
 .tree-space {
