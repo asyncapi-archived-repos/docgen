@@ -103,6 +103,10 @@ html, body {
   margin: 0;
 }
 
+.security__header {
+  font-size: 20px;
+}
+
 .section-header {
   border-bottom: #333 2px solid;
   padding-bottom: 10px;
@@ -180,6 +184,9 @@ html, body {
 .table__body__cell {
   padding: 6px 12px;
   vertical-align: top;
+}
+.table__body__cell p {
+  margin-top: 0;
 }
 .table__expand {
   display: inline-block;

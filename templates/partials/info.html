@@ -26,7 +26,7 @@
       <tr class="table__body__row">
         <td class="table__body__cell">{{#if server.variables}}<div class="table__expand" data-index={{@index}}></div>{{/if}}{{server.url}}</td>
         <td class="table__body__cell">{{server.scheme}}</td>
-        <td class="table__body__cell">{{server.description}}</td>
+        <td class="table__body__cell">{{{server.descriptionAsHTML}}}</td>
       </tr>
 
       {{#if server.variables}}
@@ -66,7 +66,7 @@
                     Any
                   {{/if}}
                 </td>
-                <td class="table__body__cell table--nested__body__cell">{{var.description}}</td>
+                <td class="table__body__cell table--nested__body__cell">{{{var.descriptionAsHTML}}}</td>
               </tr>
               {{/each}}
             </tbody>
