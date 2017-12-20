@@ -1,6 +1,6 @@
 {
   "name": "asyncapi-docgen",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "An AsyncAPI documentation generator.",
   "main": "./lib/docgen.js",
   "scripts": {
