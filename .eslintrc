@@ -65,7 +65,6 @@ rules:
   no-floating-decimal: 2
   brace-style: [2, 1tbs, { allowSingleLine: true }]
   comma-style: [2, last]
-  no-inline-comments: 2
   no-multiple-empty-lines: [2, {max: 1}]
   no-nested-ternary: 2
   operator-assignment: [2, always]

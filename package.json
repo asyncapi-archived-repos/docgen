@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/asyncapi/docgen",
   "dependencies": {
+    "commander": "^2.12.2",
     "handlebars": "^4.0.6",
     "highlight.js": "^9.12.0",
     "js-yaml": "^3.8.3",
