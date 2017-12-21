@@ -84,6 +84,33 @@ try {
 }
 ```
 
+## Custom specification extensions
+
+This package makes use of two different custom specification extensions:
+
+|Extension|Path|Description|
+|---------|----|-----------|
+|`x-logo`|`/info`|URL of the logo rendered on the top left corner of the documentation.|
+|`x-topic-separator`|`/`|A string to use as the topic separator.|
+
+#### Examples
+
+Custom logo:
+
+```yaml
+asyncapi: '1.0.0'
+info:
+  title: My API
+  x-logo: https://your-company.com/logo.png
+```
+
+MQTT-style topic separator:
+
+```yaml
+asyncapi: '1.0.0'
+x-topic-separator: '/' # This will replace dots with slashes in topic names
+```
+
 ## Requirements
 
 * Node.js v7.6+
