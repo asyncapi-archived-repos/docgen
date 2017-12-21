@@ -1,4 +1,8 @@
-# AsyncAPI documentation generator
+<p align="center"><img src="logo.png"></p>
+<p align="center">
+  <strong>AsyncAPI Documentation Generator</strong>
+</p>
+<br><br>
 
 Use your AsyncAPI definition to generate beautiful human-readable documentation for your API.
 
