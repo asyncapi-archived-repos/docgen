@@ -2,9 +2,10 @@
 <p align="center">
   <strong>AsyncAPI Documentation Generator</strong>
 </p>
+<p align="center">
+  <em>Use your AsyncAPI definition to generate beautiful<br>human-readable documentation for your API.</em>
+</p>
 <br><br>
-
-Use your AsyncAPI definition to generate beautiful human-readable documentation for your API.
 
 ![](screenshot.png)
 
