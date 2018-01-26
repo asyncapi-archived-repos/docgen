@@ -15,9 +15,10 @@ let asyncAPI;
 
 const parseOutput = dir => path.resolve(dir);
 
-const showError = err => {
+const showErrorAndExit = err => {
   console.error(red('Something went wrong:'));
   console.error(red(err.stack || err.message));
+  process.exit(1);
 };
 
 program
@@ -35,12 +36,12 @@ if (!asyncAPI) {
 }
 
 mkdirp(program.output, err => {
-  if (err) return console.error(err);
+  if (err) return showErrorAndExit(err);
 
   generate(asyncAPI, program.output).then(() => {
     console.log(green('Done! ✨'));
     console.log(yellow('Check out your shiny new API documentation at ') + magenta(program.output) + yellow('.'));
-  }).catch(showError);
+  }).catch(showErrorAndExit);
 });
 
-process.on('unhandledRejection', showError);
+process.on('unhandledRejection', showErrorAndExit);
