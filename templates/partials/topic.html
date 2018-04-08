@@ -16,11 +16,28 @@
     {{topicName}}
   </h3>
 
-  {{~#if topic.publish ~}}
-    {{~> operation operation=topic.publish~}}
-  {{~/if~}}
+  {{#if topic.publish.oneOf}}
+  <p>You can send one of the following messages:</p>
+  {{/if}}
+  {{#if topic.subscribe.oneOf}}
+  <p>You can send one of the following messages:</p>
+  {{/if}}
 
-  {{~#if topic.subscribe~}}
-    {{~> operation operation=topic.subscribe~}}
-  {{~/if~}}
+  {{~#each topic.publish.oneOf as |op index| ~}}
+    <h4>Message #{{inc index}}</h4>
+    {{~> operation operation=op cssClasses='operation--indented'~}}
+  {{else}}
+    {{~#if topic.publish ~}}
+      {{~> operation operation=topic.publish~}}
+    {{~/if~}}
+  {{~/each~}}
+
+  {{~#each topic.subscribe.oneOf as |op index| ~}}
+    <h4>Message #{{inc index}}</h4>
+    {{~> operation operation=op cssClasses='operation--indented'~}}
+  {{else}}
+    {{~#if topic.subscribe ~}}
+      {{~> operation operation=topic.subscribe~}}
+    {{~/if~}}
+  {{~/each~}}
 </div>
