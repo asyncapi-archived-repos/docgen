@@ -29,7 +29,7 @@
 {{#if prop.items}}
   {{#if prop.items.properties}}
     {{#each prop.items.properties}}
-    {{> property prop=. propName=@key path=(concat ../path @key '.')}}
+    {{> schemaProp prop=. propName=@key path=(concat ../path @key '.')}}
     {{/each}}
   {{/if}}
 {{/if}}
