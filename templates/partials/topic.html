@@ -16,6 +16,12 @@
     {{topicName}}
   </h3>
 
+  {{#if topic.parameters}}
+  {{~> parameters params=topic.parameters topicName=topicName ~}}
+  {{/if}}
+
+  <h4>Message</h4>
+
   {{#if topic.publish.oneOf}}
   <p>You can send one of the following messages:</p>
   {{/if}}

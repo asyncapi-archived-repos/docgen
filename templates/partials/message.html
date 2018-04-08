@@ -9,9 +9,11 @@
   {{{message.summaryAsHTML}}}
   {{{message.descriptionAsHTML}}}
 
+  {{#if message.headers}}
   <h4>Headers</h4>
 
   {{> schema schema=message.headers schemaName='Message Headers' hideTitle=true}}
+  {{/if}}
 
 
   {{#unless message.example}}
