@@ -28,5 +28,11 @@
 <h4>Example</h4>
 
 <pre class="hljs"><code class="json">{{~schema.formattedExample~}}</code></pre>
+{{else}}
+  {{#if schema.generatedExample}}
+  <h4>Example <em>(generated)</em></h4>
+
+  <pre class="hljs"><code class="json">{{~schema.generatedExample~}}</code></pre>
+  {{/if}}
 {{/if}}
 </div>
