@@ -1,48 +1,26 @@
+<div class="operation {{cssClasses}}">
 {{{operation.summaryAsHTML}}}
 {{{operation.descriptionAsHTML}}}
 
 {{#if operation.headers}}
-<h3>Headers</h3>
+<h4>Headers</h4>
 
-<table class="table">
-  <thead class="table__head">
-    <tr class="table__head__row">
-      <th class="table__head__cell">Name</th>
-      <th class="table__head__cell">Type</th>
-      <th class="table__head__cell">Description</th>
-    </tr>
-  </thead>
-  <tbody class="table__body">
-    {{#each operation.headers.properties}}
-    {{> property prop=. propName=@key prefix=''}}
-    {{/each}}
-  </tbody>
-</table>
+{{> schema schema=operation.headers schemaName='Message Headers' hideTitle=true}}
 {{/if}}
 
-<h3>Payload</h3>
+<h4>Payload</h4>
 
-<table class="table">
-  <thead class="table__head">
-    <tr class="table__head__row">
-      <th class="table__head__cell">Name</th>
-      <th class="table__head__cell">Type</th>
-      <th class="table__head__cell">Description</th>
-    </tr>
-  </thead>
-  <tbody class="table__body">
-    {{#each operation.payload.properties}}
-    {{> property prop=. propName=@key prefix=''}}
-    {{/each}}
-  </tbody>
-</table>
+{{> schema schema=operation.payload schemaName='Message Payload' hideTitle=true}}
 
 {{#if operation.example}}
-<h3>Example</h3>
+<h4>Example</h4>
 
 <pre class="hljs"><code class="json">{{~operation.formattedExample~}}</code></pre>
 {{/if}}
 
-<h3>Tags</h3>
+{{#if operation.tags}}
+<h4>Tags</h4>
 
 {{> tags tags=operation.tags}}
+{{/if}}
+</div>

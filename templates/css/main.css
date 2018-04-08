@@ -126,6 +126,11 @@ html, body {
   margin-right: 10px;
 }
 
+.operation--indented {
+  padding-left: 15px;
+  border-left: #263238 2px solid;
+}
+
 .operation-badge {
   display: inline-block;
   font-size: 12px;
@@ -275,7 +280,7 @@ html, body {
 }
 
 .schema {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 code {

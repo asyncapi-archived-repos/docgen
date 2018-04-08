@@ -1,6 +1,6 @@
 {
   "name": "asyncapi-docgen",
-  "version": "1.7.3",
+  "version": "1.8.0",
   "description": "An AsyncAPI documentation generator.",
   "main": "./lib/docgen.js",
   "scripts": {
@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/asyncapi/docgen",
   "dependencies": {
+    "asyncapi": "^2.0.2",
     "commander": "^2.12.2",
     "handlebars": "^4.0.6",
     "highlight.js": "^9.12.0",
