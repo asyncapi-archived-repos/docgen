@@ -9,7 +9,9 @@
 <body>
   <div class="navigation">
     <div class="navigation__logo">
+      {{#if asyncapi.info.x-logo}}
       <img class="navigation__logo__image" src="{{asyncapi.info.x-logo}}" alt="{{asyncapi.info.title}} logo">
+      {{/if}}
       <h1 class="navigation__logo__name">{{asyncapi.info.title}}</h1>
       <div class="navigation__logo__version">{{asyncapi.info.version}}</div>
     </div>
