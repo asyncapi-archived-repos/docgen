@@ -17,9 +17,9 @@
     </thead>
     <tbody class="table__body">
       {{#each schema.properties}}
-        {{> schemaProp prop=. propName=@key}}
+        {{> schemaProp prop=. propName=@key required=(contains ../schema.required @key)}}
       {{else}}
-        {{> schemaProp prop=schema propName=schemaName}}
+        {{> schemaProp prop=schema propName=schemaName required=(contains ../schema.required @key)}}
       {{/each}}
     </tbody>
   </table>
