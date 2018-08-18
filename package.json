@@ -1,6 +1,6 @@
 {
   "name": "asyncapi-docgen",
-  "version": "1.10.4",
+  "version": "1.10.5",
   "description": "An AsyncAPI documentation generator.",
   "main": "./lib/docgen.js",
   "scripts": {
@@ -35,7 +35,7 @@
     "highlight.js": "^9.12.0",
     "js-yaml": "^3.8.3",
     "json-schema-ref-parser": "^3.1.2",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.5",
     "markdown-it": "^8.3.1",
     "mkdirp": "^0.5.1",
     "openapi-sampler": "^1.0.0-beta.9",
