@@ -51,3 +51,10 @@ components:
       properties:
         key2:
           type: string
+    nestedAllOf:
+      allOf:
+        - $ref: '#/components/schemas/objects'
+        - type: object
+          properties:
+            nestedAllOf:
+              type: string
