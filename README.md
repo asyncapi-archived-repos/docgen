@@ -1,3 +1,5 @@
+## Please note: this project is deprecated in favour of [AsyncAPI-Generator](https://github.com/asyncapi/generator).
+
 <p align="center"><img src="logo.png"></p>
 <p align="center">
   <strong>AsyncAPI Documentation Generator</strong>
